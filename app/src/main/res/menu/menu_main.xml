@@ -1,0 +1,17 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.foong.cellcount.MainActivity">
+    <item
+        android:id="@+id/action_settings"
+        android:orderInCategory="100"
+        android:title="@string/action_settings"
+        app:showAsAction="ifRoom"
+        android:icon="@drawable/action_icon_setting"/>
+
+    <item
+        android:id="@+id/action_navigation"
+        android:orderInCategory="90"
+        android:title="@string/viable"
+        app:showAsAction="never" />
+</menu>

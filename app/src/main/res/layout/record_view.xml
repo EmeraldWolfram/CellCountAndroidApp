@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="4dp"
+    android:padding="6dp"
+    android:background="@drawable/result_border">
+
+    <View
+        android:id="@+id/centerLine"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:layout_centerHorizontal="true"/>
+
+
+    <TextView
+        android:id="@+id/recordName"
+        android:padding="2dp"
+        android:textSize="14sp"
+        android:typeface="serif"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="2dp"
+        android:layout_below="@id/recordName"
+        android:layout_toLeftOf="@id/centerLine"
+        android:layout_toStartOf="@id/centerLine"
+        android:text="Viability:"/>
+
+    <TextView
+        android:id="@+id/recordViability"
+        android:padding="2dp"
+        android:layout_toRightOf="@id/centerLine"
+        android:layout_toEndOf="@id/centerLine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/recordName"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="2dp"
+        android:layout_below="@id/recordViability"
+        android:layout_toLeftOf="@id/centerLine"
+        android:layout_toStartOf="@id/centerLine"
+        android:text="Cell/Square:"/>
+
+    <TextView
+        android:id="@+id/recordCellPerSquare"
+        android:padding="2dp"
+        android:layout_toRightOf="@id/centerLine"
+        android:layout_toEndOf="@id/centerLine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/recordViability"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="2dp"
+        android:layout_below="@id/recordCellPerSquare"
+        android:layout_toLeftOf="@id/centerLine"
+        android:layout_toStartOf="@id/centerLine"
+        android:text="Dillution Factor:"/>
+
+    <TextView
+        android:id="@+id/recordDilFactor"
+        android:padding="2dp"
+        android:layout_toRightOf="@id/centerLine"
+        android:layout_toEndOf="@id/centerLine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/recordCellPerSquare"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="2dp"
+        android:layout_below="@id/recordDilFactor"
+        android:layout_toLeftOf="@id/centerLine"
+        android:layout_toStartOf="@id/centerLine"
+        android:text="Concentration:"/>
+
+    <TextView
+        android:id="@+id/recordConcentration"
+        android:padding="2dp"
+        android:layout_toRightOf="@id/centerLine"
+        android:layout_toEndOf="@id/centerLine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/recordDilFactor"/>
+
+</RelativeLayout>

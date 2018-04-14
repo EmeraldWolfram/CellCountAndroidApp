@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Cell Count</string>
+    <string name="action_settings">Settings</string>
+    <string name="viable">Viable</string>
+    <string name="non_viable">Non-Viable</string>
+    <string name="viable_cell_percent">% Of Viable Cell:</string>
+    <string name="cell_per_square">Cell/Square:</string>
+    <string name="concentration">Concentration:</string>
+    <string name="dilution_factor">Dilution Factor:</string>
+    <string name="record">Record</string>
+
+    <string-array name="list_preference_entries">
+        <item>4</item>
+        <item>5</item>
+    </string-array>
+
+    <string-array name="list_preference_entry_values">
+        <item>4</item>
+        <item>5</item>
+    </string-array>
+    <string name="title_activity_database">DatabaseActivity</string>
+    <string name="str_icon">icon</string>
+
+</resources>

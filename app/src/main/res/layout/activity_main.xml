@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.foong.cellcount.MainActivity">
+
+    <View
+        android:id="@+id/mainCenterHorizontal"
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true" />
+    <View
+        android:id="@+id/mainCenterVertical"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_centerVertical="true" />
+
+    <LinearLayout
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        android:orientation="vertical"
+        android:layout_toLeftOf="@id/mainCenterHorizontal"
+        android:layout_toStartOf="@id/mainCenterHorizontal"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/button_border"
+        android:layout_margin="12dp"
+        android:onClick="onViable">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center"
+            android:textSize="24sp"
+            android:text="@string/viable"
+            android:textColor="@color/colorBlack" />
+
+        <TextView
+            android:id="@+id/viableView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_gravity="center"
+            android:textSize="20sp"
+            android:textColor="@color/colorPrimaryDark" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        android:orientation="vertical"
+        android:layout_toRightOf="@id/mainCenterHorizontal"
+        android:layout_toEndOf="@id/mainCenterHorizontal"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/anti_button_border"
+        android:layout_margin="12dp"
+        android:onClick="onNonViable">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center"
+            android:textSize="24sp"
+            android:text="@string/non_viable"
+            android:textColor="@color/colorBlack"/>
+
+        <TextView
+            android:id="@+id/nonViableView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_gravity="center"
+            android:textSize="20sp"
+            android:textColor="@color/colorPrimaryDark" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/displayBar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"
+        android:layout_above="@id/mainCenterVertical"
+        android:background="@drawable/result_border">
+
+        <View
+            android:id="@+id/innerCenterHorizontal"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true" />
+        <View
+            android:id="@+id/innerCenterVertical"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_centerVertical="true" />
+
+        <TextView
+            android:text="@string/viable_cell_percent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_toLeftOf="@id/innerCenterHorizontal"
+            android:layout_toStartOf="@id/innerCenterHorizontal"
+            android:textSize="18sp"
+            android:padding="8dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@id/innerCenterHorizontal"
+            android:layout_toEndOf="@id/innerCenterHorizontal"
+            android:textSize="18sp"
+            android:padding="8dp"
+            android:id="@+id/percent" />
+
+        <!-- Next -->
+        <TextView
+            android:text="@string/cell_per_square"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/percent"
+            android:layout_toLeftOf="@id/innerCenterHorizontal"
+            android:layout_toStartOf="@id/innerCenterHorizontal"
+            android:padding="8dp"
+            android:textSize="18sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/innerCenterHorizontal"
+            android:layout_toEndOf="@id/innerCenterHorizontal"
+            android:layout_below="@+id/percent"
+            android:textSize="18sp"
+            android:padding="8dp"
+            android:id="@+id/cellPerSq" />
+
+        <!-- Next -->
+        <TextView
+            android:text="@string/dilution_factor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/cellPerSq"
+            android:layout_toLeftOf="@id/innerCenterHorizontal"
+            android:layout_toStartOf="@id/innerCenterHorizontal"
+            android:padding="8dp"
+            android:textSize="18sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/cellPerSq"
+            android:layout_toRightOf="@id/innerCenterHorizontal"
+            android:layout_toEndOf="@id/innerCenterHorizontal"
+            android:textSize="18sp"
+            android:padding="8dp"
+            android:id="@+id/dilutionFactor" />
+
+        <!-- Next -->
+        <TextView
+            android:text="@string/concentration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/dilutionFactor"
+            android:layout_toLeftOf="@id/innerCenterHorizontal"
+            android:layout_toStartOf="@id/innerCenterHorizontal"
+            android:padding="8dp"
+            android:textSize="18sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/dilutionFactor"
+            android:layout_toRightOf="@id/innerCenterHorizontal"
+            android:layout_toEndOf="@id/innerCenterHorizontal"
+            android:textSize="18sp"
+            android:padding="8dp"
+            android:id="@+id/concentration" />
+
+        <!-- Next -->
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:text="SAVE"
+            android:textColor="@color/colorBlack"
+            android:layout_margin="6dp"
+            android:onClick="onSave"/>
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>
